@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #1F2937;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* About content styles */
+.about-content {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .about-content {
+        padding: 1.5rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+}
+
+
+</style>
+<div class="container">
+    <h1>About Us</h1>
+    <div class="about-content">
+        <p class="mb-4">
+            Welcome to our platform! We are dedicated to revolutionizing the interview process
+            through innovative AI-powered solutions.
+        </p>
+        <p class="mb-4">
+            Our mission is to help job seekers prepare for interviews more effectively and
+            assist employers in streamlining their hiring process.
+        </p>
+        <p>
+            With our cutting-edge technology, we analyze resumes and generate personalized
+            interview questions, providing a unique and valuable experience for both candidates
+            and recruiters.
+        </p>
+    </div>
+</div>
+{% endblock %}

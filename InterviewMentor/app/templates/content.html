@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="main-content">
+    <div class="content-left">
+        <h1>Welcome<br><span>Candidate!</span></h1>
+        <p class="description">
+            Ready to ace your next job interview? Our mock interview platform helps you practice and improve your
+            skills. Get real-time feedback and boost your confidence.
+        </p>
+        <a href="{% url 'generate_questions' %}" class="start-interview-btn">Start Now!</a>
+    </div>
+    <div class="image-container">
+        <div class="yellow-accent"></div>
+        <img src="{% static 'images/person.png' %}" alt="INTERVIEWs" class="circular-image">
+        <span class="floating-icon icon-rocket">🚀</span>
+        <span class="floating-icon icon-chat">💬</span>
+        <span class="floating-icon icon-target">🎯</span>
+    </div>
+</main>
+{% endblock %}

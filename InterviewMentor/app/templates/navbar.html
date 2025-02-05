@@ -1,0 +1,13 @@
+{% load static %}
+
+<nav class="navbar">
+    <a href="{% url 'home' %}" class="logo">
+        <div class="logo-text">INTERVIEW<span>MENTOR</span></div>
+    </a>
+    <div class="nav-links">
+        <a href="{% url 'home' %}" class="active">Home</a>
+        <!-- <a href="{% url 'services' %}">Services</a> -->
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'faq' %}">FAQ</a>
+    </div>
+</nav>

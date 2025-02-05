@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<main class="main-content">
+    <div class="content-left">
+        <h1>Upload Your<br><span>Resume!</span></h1>
+        <p class="description">
+            Upload your resume to begin your mock interview session. Make sure it's in .pdf or .doc format.
+        </p>
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <label for="resume">Upload your resume:</label>
+            <input type="file" name="resume" id="resume" accept=".pdf">
+            <button type="submit">Generate Questions</button>
+        </form>
+
+        {% if questions %}
+        <h2>Generated Interview Questions:</h2>
+        <ul>
+            {% for question in questions %}
+            <li>{{ question }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+    </div>
+    <div class="image-container">
+        <div class="yellow-accent"></div>
+        <img src="{% static 'images/person.jpg' %}" alt="INTERVIEWs" class="circular-image">
+        <span class="floating-icon icon-rocket">🚀</span>
+        <span class="floating-icon icon-chat">💬</span>
+        <span class="floating-icon icon-target">🎯</span>
+    </div>
+</main>
+
+
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: orange;
+    background-color: #1F2937;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styles */
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* FAQ styles */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.faq-question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e50;
+    margin-bottom: 0.5rem;
+}
+
+.faq-answer {
+    font-size: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .faq-item {
+        padding: 1rem;
+    }
+
+    .faq-question {
+        font-size: 1.1rem;
+    }
+
+    .faq-answer {
+        font-size: 0.9rem;
+    }
+}
+
+
+</style>
+<div class="container">
+    <h1>Frequently Asked Questions</h1>
+    <p>Under Maintainence</p>
+</div>
+
+{% endblock %}

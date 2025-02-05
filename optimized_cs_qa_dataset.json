@@ -1,0 +1,86 @@
+[
+    {
+        "context": "Skill: Python",
+        "question": "What is Python used for?"
+    },
+    {
+        "context": "Skill: Python",
+        "question": "Expliquez les principes cl\u00e9s de Python."
+    },
+    {
+        "context": "Skill: Python",
+        "question": "when using Python?"
+    },
+    {
+        "context": "Skill: Java",
+        "question": "What is Java used for?"
+    },
+    {
+        "context": "Skill: Java",
+        "question": "Explicit the key principles of Java."
+    },
+    {
+        "context": "Skill: Java",
+        "question": "What are the common challenges faced when using Java?"
+    },
+    {
+        "context": "Skill: C++",
+        "question": "What is C++ used for?"
+    },
+    {
+        "context": "Skill: C++",
+        "question": "Expliquer the key principles of C++."
+    },
+    {
+        "context": "Skill: C++",
+        "question": "C++? What are the common challenges faced when using C++?"
+    },
+    {
+        "context": "Skill: Machine Learning",
+        "question": "Machine Learning? What is Machine Learning used for?"
+    },
+    {
+        "context": "Skill: Machine Learning",
+        "question": "Explicit the key principles of Machine Learning."
+    },
+    {
+        "context": "Skill: Machine Learning",
+        "question": "Machine Learning? What are the common challenges faced when using Machine Learning?"
+    },
+    {
+        "context": "Skill: Cloud Computing",
+        "question": "What is Cloud Computing used for?"
+    },
+    {
+        "context": "Skill: Cloud Computing",
+        "question": "the key principles of Cloud Computing."
+    },
+    {
+        "context": "Skill: Cloud Computing",
+        "question": "Common challenges faced when using Cloud Computing?"
+    },
+    {
+        "context": "Project: Chatbot for Customer Service. Developed an AI-powered chatbot.",
+        "question": "What was the objective of the Chatbot for Customer Service project?"
+    },
+    {
+        "context": "Project: Chatbot for Customer Service. Developed an AI-powered chatbot.",
+        "question": "during the Chatbot for Customer Service project?"
+    },
+    {
+        "context": "Project: Chatbot for Customer Service. Developed an AI-powered chatbot.",
+        "question": "What technologies were used in the Chatbot for Customer Service project?"
+    },
+    {
+        "context": "Project: Blockchain Voting System. Created a secure blockchain-based voting system.",
+        "question": "The Blockchain Voting System project was launched in November 2018."
+    },
+    {
+        "context": "Project: Blockchain Voting System. Created a secure blockchain-based voting system.",
+        "question": "during the Blockchain Voting System project?"
+    },
+    {
+        "context": "Project: Blockchain Voting System. Created a secure blockchain-based voting system.",
+        "question": "in the Blockchain Voting System project?"
+    }
+]

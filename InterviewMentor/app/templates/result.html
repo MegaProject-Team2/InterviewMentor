@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Results</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #ffb800;
+            --secondary-color: #ffb800;
+            --background-color: #1F2937;
+            --card-background: #ffffff;
+            --text-color: black;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .result-container {
+            max-width: 1450px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+
+        .results-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .result-item {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .result-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .question, .answer, .ideal-answer, .similarity {
+            margin-bottom: 1rem;
+        }
+
+        .question strong, .answer strong, .ideal-answer strong, .similarity strong {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .question p, .answer p, .ideal-answer p, .similarity p {
+            margin: 0;
+            padding: 0.5rem;
+            background-color: #f9f9f9;
+            border-radius: 6px;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        .similarity p {
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+
+        .return-home {
+            display: block;
+            width: max-content;
+            margin: 2rem auto 0;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary-color);
+            color: var(--secondary-color);
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: white;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .return-home:hover {
+            background-color: var(--secondary-color);
+            color: var(--background-color);
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .result-container {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+                font-family: 'Arial', sans-serif;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Interview Results</h1>
+        <div class="results-list">
+            {% for result in results %}
+            <div class="result-item">
+                <div class="question">
+                    <strong>Question:</strong>
+                    <p>{{ result.question }}</p>
+                </div>
+                <div class="answer">
+                    <strong>Your Answer:</strong>
+                    <p>{{ result.answer }}</p>
+                </div>
+                <div class="ideal-answer">
+                    <strong>Ideal Answer:</strong>
+                    <p>{{ result.expected_answer }}</p>
+                </div>
+                {% if result.similarity %}
+                <div class="similarity">
+                    <strong>Similarity Score:</strong>
+                    <p>{{ result.similarity }}</p>
+                </div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+        <a href="/" class="return-home">Return to Home</a>
+    </div>
+</body>
+</html>
+{% endblock %}
+
