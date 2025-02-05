@@ -37,11 +37,8 @@ def start_interview(request):
 from django.shortcuts import render, redirect
 from django.core.files.storage import FileSystemStorage
 from django.http import JsonResponse
-from groq import Groq
 from difflib import SequenceMatcher
 from .utils import extract_text_from_pdf, parse_generated_output
-
-transformer = Groq(api_key="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")
 
 # Generate questions view
 def generate_questions(request):
