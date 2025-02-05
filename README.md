@@ -9,6 +9,9 @@ InterviewMentor helps job seekers prepare for interviews using NLP and AI. It pr
 
 ## Installation
 ```sh
-git clone https://github.com/your-username/InterviewMentor.git
+git clone https://github.com/MegaProject-Team2/InterviewMentor.git
 cd InterviewMentor
 pip install -r requirements.txt
+cd InterviewMentor
+python manage.py runserver
+
